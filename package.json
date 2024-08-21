@@ -1,0 +1,20 @@
+{
+  "name": "servicio_web_pago_online",
+  "version": "1.0.0",
+  "description": "Tareita 1 - Servicio Web Pago Online - Desarrollo de aplicaciones basadas en microservicios",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
