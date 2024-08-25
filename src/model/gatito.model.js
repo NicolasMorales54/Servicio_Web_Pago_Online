@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const GatitoSchema = new mongoose.Schema({
-  name: {
+const gatitosSchema = new mongoose.Schema({
+  nombre: {
     type: String,
     required: true,
   },
@@ -17,10 +17,6 @@ const GatitoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tamano: {
-    type: String,
-    required: true,
-  },
   peso: {
     type: String,
     required: true,
@@ -29,7 +25,12 @@ const GatitoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  disponible: {
+  disponibilidad: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
+  esterilizado: {
     type: Boolean,
     required: true,
     default: false,
@@ -42,13 +43,13 @@ const GatitoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  esterilizado: {
-    type: Boolean,
+  image: {
+    type: String,
     required: true,
-    default: false,
   },
 }, {
-    timestamps: true
+    timestamps: true,
+    collection: 'gatos'  // Especifica el nombre de la colección aquí
 });
 
-export default mongoose.model("gatito", GatitoSchema);
+export default mongoose.model("Gato", gatitosSchema);
