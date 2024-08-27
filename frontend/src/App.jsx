@@ -9,10 +9,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/index" element={<PrincipalPage />} />
-        <Route path="/" element={<Layout />}>
+        {/* Ruta raíz para PrincipalPage */}
+        <Route path="/" element={<PrincipalPage />} />
+
+        {/* Ruta para el layout con sus rutas hijas */}
+        <Route path="/app" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/:id" element={<Detail />} />
+          <Route path=":id" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>

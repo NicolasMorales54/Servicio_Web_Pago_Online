@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/productCard";
 import axios from "axios";
+import "../components/style/homeStyle.css";
+
 
 const Home = () => {
     const [gatos, setGatos] = useState([]);
@@ -20,8 +22,8 @@ const Home = () => {
     fetchData();
   }, []);
   return (
-    <div>
-        <h1 className='text-3xl my-5'>Lista de Gatos</h1>
+    <div className="home-container">
+        <h1 className='conocelos'>Conócelos...</h1>
         <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5'>
         {gatos.map((gato, index) => (
             <ProductCard key={index} data={gato} />
