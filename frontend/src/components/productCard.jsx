@@ -34,6 +34,7 @@ const ProductCard = (props) => {
       style={{
         // Borde azul claro
         boxShadow: "1px 4px 8px 4px rgba(13, 200, 255, 0.6)", // Sombra azul claro
+        marginBottom: "20px",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

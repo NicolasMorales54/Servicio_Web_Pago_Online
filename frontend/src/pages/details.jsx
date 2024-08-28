@@ -36,7 +36,7 @@ const Details = () => {
             src={details.image}
             alt=""
             className=""
-            style={{ borderRadius: "10px", height: "500px", width: "500px" }}
+            style={{ borderRadius: "10px", height: "500px", width: "350px", marginLeft: "100px" }}
           />
         </div>
         <div className="flex flex-col gap-5">
@@ -68,19 +68,19 @@ const Details = () => {
             <div className="flex justify-between">
               <span className="font-bold text-xl">Disponible:</span>
               <span className="text-xl">
-                {details.disponibilidad ? "Disponible" : "No Disponible"}
+                {details.disponibilidad ? "Si" : "No"}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="font-bold text-xl">Vacunado:</span>
               <span className="text-xl">
-                {details.vacunado ? "Vacunado" : "No Vacunado"}
+                {details.vacunado ? "Si" : "No"}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="font-bold text-xl">Esterilizado:</span>
               <span className="text-xl">
-                {details.esterilizado ? "Esterilizado" : "No Esterilizado"}
+                {details.esterilizado ? "Si" : "No"}
               </span>
             </div>
           </div>

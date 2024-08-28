@@ -58,9 +58,9 @@ const CartTab = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
+    const dataToSend = { ...formData, carts };
     try {
-      const response = await axios.post('http://localhost:3000/registro', formData);
+      const response = await axios.post('http://localhost:3000/registro', dataToSend);
       alert(response.data.successMessage);
       handleCloseModal();
     } catch (error) {
