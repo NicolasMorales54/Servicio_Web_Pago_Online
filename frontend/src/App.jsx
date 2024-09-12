@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import VistaGatos from "./pages/vistaGatos.jsx";
 import Layout from "./components/layout.jsx";
 import Detail from "./pages/details.jsx";

@@ -3,7 +3,7 @@ import { connectDB } from './db.js';
 
 const startServer = async () => {
     await connectDB();
-    app.listen(3000, () => {
+    app.listen(3001, () => {
         console.log('Servidor corriendo en http://localhost:3000');
     });
 };

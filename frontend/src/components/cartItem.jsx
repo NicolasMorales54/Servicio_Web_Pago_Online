@@ -9,13 +9,13 @@ const CartItem = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/gatos/${productId}`)
+    fetch(`http://localhost:3001/gatos/${productId}`)
       .then((res) => res.json())
       .then((data) => setDetails(data))
       .catch((err) => console.log(err));
   }, [productId]);
 
-  console.log(details);
+  console.log("estos son los detalles", details);
   
   const handleDeleteItem = () => {
     dispatch(deleteFromCart({ productId }));

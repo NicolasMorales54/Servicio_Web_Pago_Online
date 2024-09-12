@@ -1,4 +1,3 @@
-import { set } from "mongoose";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +13,7 @@ const Details = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/gatos/${id}`)
+    fetch(`http://localhost:3001/gatos/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data))
       .catch((err) => console.log(err));

@@ -8,7 +8,6 @@ const CartTab = () => {
   const carts = useSelector((store) => store.cart.items);
   const statusTab = useSelector((store) => store.cart.statusTab);
   const dispatch = useDispatch();
-  const [totalPrice, setTotalPrice] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado para el modal
   const [formData, setFormData] = useState({
     nombre: "",
@@ -23,18 +22,13 @@ const CartTab = () => {
       for (const item of carts) {
         try {
           const response = await fetch(
-            `http://localhost:3000/gatos/${item.productId}`
+            `http://localhost:3001/gatos/${item.productId}`
           );
-          const data = await response.json();
-          total += data.precio * item.quantity;
         } catch (err) {
           console.error(err);
         }
       }
-      setTotalPrice(total);
     };
-
-    calculateTotalPrice();
   }, [carts]);
 
   const handleCloseTabCart = () => {
@@ -60,7 +54,7 @@ const CartTab = () => {
     e.preventDefault();
     const dataToSend = { ...formData, carts };
     try {
-      const response = await axios.post('http://localhost:3000/registro', dataToSend);
+      const response = await axios.post('http://localhost:3001/registro', dataToSend);
       alert(response.data.successMessage);
       handleCloseModal();
     } catch (error) {
